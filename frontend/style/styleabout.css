@@ -1,0 +1,248 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    background-color: #1E4D99;
+}
+
+.top {
+    background-image: linear-gradient(#1E4D99 4.5rem, #3271D5);
+    padding-bottom: 54px !important;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 36px;
+
+}
+
+.menu {
+    margin-right: auto;
+}
+
+.search-container {
+    background-color: #fff;
+    border-radius: 50px 0 0 50px;
+}
+
+.radius {
+    border-radius: 0 50px 50px 0;
+}
+
+.box-container {
+    background-color: #fff;
+    height: 40px;
+    width: 390px;
+    padding: 0 10px;
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+}
+
+.element-container {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.search {
+    border: none;
+    width: 250%;
+    height: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.nav-link {
+    font-weight: 400;
+    font-size: 18px;
+    margin-right: 3rem;
+}
+
+.icon:hover {
+    background-color: #053480;
+}
+
+.link-login {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.link-login:hover {
+    transition: 0.5s;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.link-login:not(:hover) {
+    transition: 0.5s;
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.text-grey {
+    color: #696969;
+}
+
+.hero {
+    padding-top: 5rem;
+}
+
+.tagline,
+.cursor {
+    font-size: 50px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.panel {
+    /* min-height: 144px; */
+    box-shadow: 0px 8px 24px rgba(25, 72, 142, 0.15);
+    border-radius: 8px;
+    margin-top: -4.5rem;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.item-container {
+    align-items: center;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.item {
+    display: grid;
+    padding: 0 12px;
+}
+
+.icon-kategori img {
+    width: 54px;
+}
+
+.web-name {
+    font-weight: bold;
+    color: #3271D5;
+}
+
+.text-1 {
+    font-size: 24px;
+}
+
+.text-2 {
+    font-weight: 500;
+    font-size: 32px;
+    color: #3271D5;
+}
+
+.section-ulasan {
+    padding: 80px 0;
+}
+
+.ulasan-panel {
+    box-shadow: 0px 8px 24px rgba(25, 72, 142, 0.15);
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.ulasan-komen {
+    color: #464C55;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: justify;
+}
+
+.fa {
+    padding: 20px 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 42px;
+}
+
+.fa:hover {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.footer {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .item-container {
+        margin: 0 5px;
+    }
+
+    .item {
+        padding: 0 0;
+    }
+
+    .icon-kategori img {
+        width: 45px;
+    }
+
+    .text-kategori {
+        font-size: 12px;
+    }
+
+    .panel {
+        /* width: 94%;
+        margin-left: 3%; */
+        margin-top: -6rem;
+    }
+
+    .head-ulasan {
+        text-align: center;
+    }
+
+    .ulasan-komen {
+        color: #464C55;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+    }
+
+    .ulasan-tengah {
+        margin: 20px 0;
+    }
+
+    .icon-sosmed {
+        text-align: center;
+    }
+
+    .footer {
+        text-align: start;
+        font-size: 12px;
+    }
+
+    .text-1 {
+        font-size: 20px;
+    }
+
+    .text-2 {
+        font-size: 24px;
+    }
+}
+
+.tim {
+    margin-top: 70px;
+
+}
+
+.nama {
+    margin-top: 17px;
+}
+
+.program {
+    margin-bottom: 80px;
+
+}

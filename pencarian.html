@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ngelancer: Pencarian</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="frontend/style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <section class="container ">
+        <div class="fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark  ">
+                <div class="container">
+                    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="index.html">
+                        ngelancer
+                    </a>
+                    <!-- for mobile -->
+                    <button class="d-block d-lg-none btn" style="margin-left: -4px;" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        <i class="material-icons mt-1 text-light icon" style="font-size:28px;padding: 5px;">
+                            search
+                        </i>
+                    </button>
+                    <!---------------------------------------->
+                    <!-- for desktop  Searching-->
+                    <div class="input-group flex-nowrap d-none d-lg-flex">
+                        <input type="text" class="form-control input-search" placeholder="Cari Freelancer"
+                            aria-label="search" aria-describedby="addon-wrapping">
+                        <a class="input-group-text btn-search btn-white" id="addon-wrapping" href="pencarian.html"
+                            style="text-decoration: none;border: none;">
+                            <i class="material-icons mt-1 text-grey" style="font-size: 28px;">
+                                search
+                            </i>
+                        </a>
+
+                    </div>
+                    <!------------------------------------------------>
+
+                    <div class="collapse navbar-collapse menu ps-lg-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 menu-font">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="index.html">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="about.html">Tentang</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="panduan.html">Panduan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="login.html">
+                                    <span class="fw-bold link-login" style="color:#fff;">Masuk/Daftar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Search Kolom Mobile-->
+                <div class="container d-lg-none d-block">
+                    <div class="collapse" id="collapseExample">
+                        <form action="pencarian.html">
+                            <input type="text" class="form-control" id="searchinput" placeholder="Cari Freelancer...">
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <!-- Menu Kategori -->
+            <section class="container-fluid daftar-kategori shadow d-none d-lg-block"
+                style="padding: 20px 0;background-color: #fff;">
+                <div class="wrapper text-center">
+                    <a class="mx-5 text-dark" href="#" style="text-decoration: none;">Desain Grafis</a>
+                    <a class="mx-5 text-dark" href="#" style="text-decoration: none;">Web dan Pemrograman</a>
+                    <a class="mx-5 text-dark" href="#" style="text-decoration: none;">Visual Audio</a>
+                    <a class="mx-5 text-dark" href="#" style="text-decoration: none;">Penulisan</a>
+                    <a class="mx-5 text-dark" href="#" style="text-decoration: none;">Jasa Konsultasi</a>
+                    <a class="mx-5 text-dark" href="#" style="text-decoration: none;">Bisnis dan Pemasaran</a>
+                </div>
+            </section>
+            <!-- ------------------------------------- -->
+        </div>
+        <!-- Spacer -->
+        <div id="spacer-navbar"></div>
+        <!-- --------------------------------------------->
+    </section>
+
+    <!-- Filter Pencarian -->
+    <section class="container my-4">
+        <div class="filter-pencarian">
+            <div class="dropdown d-inline-block">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="urutkan-dari"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Urutkan Dari
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="urutkan-dari">
+                    <li><a class="dropdown-item" href="#">Terpopuler</a></li>
+                    <li><a class="dropdown-item" href="#">Terbaru</a></li>
+                    <li><a class="dropdown-item" href="#">Harga Tertinggi</a></li>
+                    <li><a class="dropdown-item" href="#">Harga Terendah</a></li>
+                </ul>
+            </div>
+            <div class="dropdown d-inline-block ms-3">
+                <button class="btn btn-outline-secondary" type="button" id="ulasan-filter" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <div class="row justify-content-center">
+                        <div class="col">Ulasan</div>
+                        <div class="col">
+                            <span class="material-icons" style="color: #FEC701;font-size: 20px;">
+                                star
+                            </span>
+                        </div>
+                    </div>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="ulasan-filter">
+                    <li class="wrapper dropdown-item">
+                        <button class="btn">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="material-icons" style="color: #FEC701;">
+                                        star
+                                    </span>
+                                </div>
+                                <div class="col-8">5</div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="wrapper dropdown-item">
+                        <button class="btn">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="material-icons" style="color: #FEC701;">
+                                        star
+                                    </span>
+                                </div>
+                                <div class="col-8">4 ke Atas</div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="wrapper dropdown-item">
+                        <button class="btn">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="material-icons" style="color: #FEC701;">
+                                        star
+                                    </span>
+                                </div>
+                                <div class="col-8">3 ke Atas</div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="wrapper dropdown-item">
+                        <button class="btn">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="material-icons" style="color: #FEC701;">
+                                        star
+                                    </span>
+                                </div>
+                                <div class="col-8">2 ke Atas</div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="wrapper dropdown-item">
+                        <button class="btn">
+                            <div class="row">
+                                <div class="col-2">
+                                    <span class="material-icons" style="color: #FEC701;">
+                                        star
+                                    </span>
+                                </div>
+                                <div class="col-8">1 ke Atas</div>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="wrapper dropdown-item">
+                        <button class="btn">
+                            Tidak ada Ulasan
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------------------------- -->
+
+    <!-- Isi Pencarian -->
+    <section class="pencarian-container container">
+        <div class="item-pencarian-wrapper">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-6 mb-lg-2 mb-3 px-lg-2 py-lg-1 px-2">
+                    <div class="item-pencarian-container rounded-3">
+                        <div class="row py-2 px-2">
+                            <div class="col-lg-2 col-md-2 col-2">
+                                <span class="material-icons icon-user" style="color: #1E4D99;">
+                                    account_circle
+                                </span>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-8 ps-3">
+                                <div class="username-pencarian fs-18 fs-sm-12">Budi Setiawan</div>
+                                <div class="info-pencarian text-secondary fs-16 fs-sm-10 ">Aktif
+                                    2 jam yang lalu
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-1">
+                                <span class="material-symbols-outlined icon-whislist">
+                                    favorite
+                                </span>
+                            </div>
+                        </div>
+                        <div class="image-pencarian">
+                            <img src="frontend/images/image-pencarian.png" width="100%" alt="">
+                        </div>
+                        <div class="name-pencarian py-2 px-lg-3 px-md-2 px-2">
+                            <p class="fs-18 fs-sm-12 text-black-80">Landing Page Website
+                                Company
+                                atau
+                                Perusahaan
+                            </p>
+                            <div class="fs-12 fs-sm-10">Mulai</div>
+                            <div class="row p-0">
+                                <div class="col-lg-8 col-md-8 col-7 item-price">Rp 30.000</div>
+                                <div class="col-lg-4 col-md-4 col-1 d-flex align-items-center">
+                                    <span class="material-symbols-outlined fs-20 fs-sm-15"
+                                        style="color: #FEC701;margin-left: -0.5rem;">
+                                        star
+                                    </span>
+                                    <span class="fs-16 fs-sm-12 text-secondary">4.5(10)</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----------------------------------------- -->
+
+    <!-- Pagenation -->
+    <div class="d-flex justify-content-center my-5">
+        <ul class="pagination">
+            <li class="page-item mx-1">
+                <a class="page-link text-blue" style="font-size: 20px;border-radius: 50%;padding: 0 10px;" href="#"
+                    aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item mx-1"><a class="page-link bg-primary text-white"
+                    style="font-size: 20px;border-radius: 50%;padding: 0 10px;" href="#">1</a>
+            </li>
+            <li class="page-item mx-1"><a class="page-link border-0 text-blue" style="font-size: 20px;padding: 0 10px;"
+                    href="#">2</a>
+            </li>
+            <li class="page-item mx-1"><a class="page-link border-0 text-blue" style="font-size: 20px;padding: 0 10px;"
+                    href="#">3</a>
+            </li>
+            <li class="page-item mx-1">
+                <a class="page-link text-blue" style="font-size: 20px;border-radius: 50%;padding: 0 10px;" href="#"
+                    aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Footer -->
+    <section class="before-footer bg-primary">
+        <div class="container">
+            <!-- For Desktop -->
+            <div class="row py-4 d-none d-lg-flex">
+                <div class="col-lg-3 me-4 align-self-center">
+                    <div class="logo text-white">ngelancer</div>
+                    <div class="text-white" style="margin-left: 0.1rem;">
+                        <a href="#" class="text-decoration-none text-white fs-16 d-block">
+                            <i class="fa fa-solid fa-envelope-open p-0"></i>
+                            hello@ngelancer.com
+                        </a>
+                        <span class="text-decoration-none text-white fs-16">
+                            Pekanbaru,Riau
+                        </span>
+                    </div>
+                    <div class="mt-2 d-flex">
+                        <div class="pe-2">
+                            <img src="frontend/images/play-store.svg" alt="" width="100">
+                        </div>
+                        <div class="pe-2">
+                            <img src="frontend/images/app-store.svg" alt="" width="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h3 class="fs-24 fw-medium text-white">Kategori</h3>
+                    <div class="mt-2">
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Pemrograman</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Grafik Desain</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Visual Audio</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Pemasaran</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Penulisan</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Jasa Konsultasi</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Gaya Hidup</a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h3 class="fs-24 fw-medium text-white">Tentang</h3>
+                    <div class="mt-2">
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Tim Kami</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Tentang Website</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Blog</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 me-5">
+                    <h3 class="fs-24 fw-medium text-white">Panduan</h3>
+                    <div class="mt-2">
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Daftar Sebagai
+                            Freelancer</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Pembayaran</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Jaminan Pekerjaan</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">FAQ</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Cara Order</a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h3 class="fs-24 fw-medium text-white">Lainnya</h3>
+                    <div class="mt-2">
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Feedback</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Bekerja Dengan
+                            ngelancer</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Syarat dan
+                            Ketentuan</a>
+                        <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block">Kebijakan dan
+                            Privasi</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------------- -->
+
+            <!-- For Mobile -->
+            <div class="footer-kategori">
+                <div class="row pt-3 justify-content-between d-flex d-lg-none">
+                    <div class="col">
+                        <h3 class="fs-24 fs-sm-20 fw-medium text-white">Kategori</h3>
+                    </div>
+                    <div class="col text-end">
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#kategori-footer"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse" id="kategori-footer">
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Pemrograman</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Grafik
+                        Desain</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Visual
+                        Audio</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Pemasaran</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Penulisan</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Jasa
+                        Konsultasi</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Gaya Hidup</a>
+                </div>
+            </div>
+            <div class="tentang-kategori">
+                <div class="row py-2 justify-content-between d-flex d-lg-none">
+                    <div class="col">
+                        <h3 class="fs-24 fs-sm-20 fw-medium text-white">Tentang</h3>
+                    </div>
+                    <div class="col text-end">
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#tentang-footer"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse" id="tentang-footer">
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Tim Kami</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Tentang
+                        Website</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Blog</a>
+                </div>
+            </div>
+            <div class="panduan-kategori">
+                <div class="row py-2 justify-content-between d-flex d-lg-none">
+                    <div class="col">
+                        <h3 class="fs-24 fs-sm-20 fw-medium text-white">Panduan</h3>
+                    </div>
+                    <div class="col text-end">
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#panduan-footer"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse" id="panduan-footer">
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Daftar Sebagai
+                        Freelancer</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Pembayaran</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Jaminan
+                        Pekerjaan</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">FAQ</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Cara Order</a>
+                </div>
+            </div>
+            <div class="Lainnya-kategori">
+                <div class="row py-2 justify-content-between d-flex d-lg-none">
+                    <div class="col">
+                        <h3 class="fs-24 fs-sm-20 fw-medium text-white">Lainnya</h3>
+                    </div>
+                    <div class="col text-end">
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#lainnya-footer"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse" id="lainnya-footer">
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Feedback</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Bekerja Dengan
+                        ngelancer</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Syarat dan
+                        Ketentuan</a>
+                    <a href="#" class="text-decoration-none footer-a text-white fs-14 d-block my-1 ms-2">Kebijakan dan
+                        Privasi</a>
+                </div>
+            </div>
+
+            <!-- ------------------------------ -->
+        </div>
+    </section>
+    <footer class="container-fluid bg-dark">
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-4 text-center">
+                <div class="container icon-sosmed">
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube-play"></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 text-start">
+                <div class="footer"><span>ngelancer Indonesia</span></div>
+            </div>
+            <div class="col-6 col-md-4 text-lg-end">
+                <div class="footer mb-3"><span>© Hak cipta dilindungi. ngelancer company</span></div>
+            </div>
+        </div>
+    </footer>
+    <!-- ---------------------------------------------- -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="frontend/scripts/setings.js"></script>
+    <script src="frontend/scripts/pencarianClicker.js"></script>
+</body>
+
+</html>

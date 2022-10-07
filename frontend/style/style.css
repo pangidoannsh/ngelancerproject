@@ -1,0 +1,661 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    background-color: #1E4D99;
+}
+
+.admin nav {
+    background-color: #212529;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-a:hover {
+    color: #696969;
+}
+
+.text-blue {
+    color: #1E4D99;
+}
+
+.bg-secondary {
+    background-color: #D7D7D7 !important;
+}
+
+.bg-secondary-dark {
+    background-color: #C4C4C4 !important;
+}
+
+.bg-primary-light {
+    background-color: #3271D5;
+}
+
+.bg-primary {
+    background-color: #1E4D99 !important;
+}
+
+.text-black-80 {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.text-primary {
+    color: #3271D5 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #1E4D99 !important;
+}
+
+.btn-primary {
+    background-color: #3271D5 !important;
+    color: #fff !important;
+    border: #3271D5 !important;
+}
+
+.btn-admin {
+    background-color: #2271B1 !important;
+}
+
+.btn-success {
+    background-color: #5BBC2E !important;
+    border: #5BBC2E !important;
+}
+
+.btn-success:hover {
+    background-color: #42A315 !important;
+}
+
+.btn-white {
+    background-color: #fff !important;
+}
+
+.input-search {
+    border-radius: 50px 0 0 50px;
+    border: none;
+}
+
+.btn-search {
+    border-radius: 0 50px 50px 0;
+}
+
+.top {
+    background-image: linear-gradient(#1E4D99 4.5rem, #3271D5);
+    padding-bottom: 150px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.menu {
+    margin-right: auto;
+}
+
+.search-container {
+    background-color: #fff;
+    border-radius: 50px 0 0 50px;
+}
+
+.radius {
+    border-radius: 0 50px 50px 0;
+}
+
+.box-container {
+    background-color: #fff;
+    height: 40px;
+    width: 390px;
+    padding: 0 10px;
+    /* border-radius: 50px; */
+    margin-left: 1.5rem;
+    margin-right: 3rem;
+    /* border: 1px solid black; */
+}
+
+.element-container {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    /* border: 1px solid black; */
+}
+
+.nav-link {
+    font-weight: 400;
+    font-size: 18px;
+    /* margin: 0 1.2rem; */
+    margin-right: 3rem;
+}
+
+.icon:hover {
+    background-color: #053480;
+}
+
+.link-login {
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.link-login:hover {
+    transition: 0.5s;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.link-login:not(:hover) {
+    transition: 0.5s;
+    border-radius: 0px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.text-grey {
+    color: #696969;
+}
+
+.hero {
+    padding-top: 5rem;
+}
+
+.item-container img {
+    transition: 0.3s;
+}
+
+.item-container:hover img {
+    position: relative;
+    transform: translateY(-5px);
+    /* animation-name: popup;
+    animation-duration: 0.3s; */
+    bottom: 5px;
+}
+
+@keyframes popup {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: 5px;
+    }
+}
+
+.cursor,
+.typer {
+    /* font-family: 'Courier Prime', monospace; */
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff !important;
+}
+
+.panel-kategori {
+    box-shadow: 0px 8px 24px rgba(25, 72, 142, 0.15);
+    border-radius: 8px;
+    margin-top: -4rem;
+    background-color: #fff;
+    padding: 2rem 0;
+}
+
+.panel-login {
+    box-shadow: 0px 8px 24px rgba(25, 72, 142, 0.15);
+    border-radius: 8px;
+    margin-top: -9rem;
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+.item-container {
+    align-items: center;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.item {
+    display: grid;
+    padding: 0 12px;
+}
+
+.icon-kategori img {
+    width: 54px;
+}
+
+.web-name {
+    font-weight: bold;
+    color: #3271D5;
+}
+
+.text-1 {
+    font-size: 24px;
+}
+
+.text-2 {
+    font-weight: 500;
+    font-size: 32px;
+    color: #3271D5;
+}
+
+.ulasan-panel {
+    box-shadow: 0px 8px 24px rgba(25, 72, 142, 0.15);
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.ulasan-komen {
+    color: #464C55;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: justify;
+}
+
+.fa {
+    padding: 20px 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 42px;
+}
+
+.fa:hover {
+    color: #fff;
+    opacity: 0.7;
+}
+
+.footer {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.content {
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 80px 70px 30px 70px;
+}
+
+.panduan-icon {
+    font-size: 48px !important;
+}
+
+.panduan-head {
+    margin: 80px 0;
+    font-size: 36px;
+}
+
+.icon-sosmed {
+    margin-top: -3px;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-24 {
+    font-size: 24px !important;
+}
+
+.fs-32 {
+    font-size: 32px;
+}
+
+.fs-34 {
+    font-size: 34px !important;
+}
+
+.fs-40 {
+    font-size: 40px !important;
+}
+
+.fs-50 {
+    font-size: 50px !important;
+}
+
+.fs-70 {
+    font-size: 70px !important;
+}
+
+.content-container ul {
+    text-align: justify;
+    margin-top: -5px;
+}
+
+.content-container ul {
+    margin-bottom: 4px;
+}
+
+.option-login .btn {
+    color: #696969;
+    border-bottom: 2px solid #fff;
+}
+
+.login-active {
+    color: black !important;
+    transition: 1s ease;
+    border-bottom-width: 100%;
+    border-bottom: 2px solid #3271D5 !important;
+    border-radius: 0;
+}
+
+.space {
+    height: 6rem;
+}
+
+.item-pencarian-container {
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+}
+
+.item-pencarian-container:hover {
+    box-shadow: 0px 8px 24px rgba(25, 72, 142, 0.2);
+}
+
+.icon-user {
+    font-size: 48px !important;
+}
+
+.icon-whislist {
+    font-size: 20px !important;
+    margin-top: 0.25rem;
+}
+
+.item-price {
+    font-weight: 500;
+    font-size: 24px;
+    color: #19488E;
+}
+
+.icon-profile {
+    font-size: 150px !important;
+}
+
+.username-freelancer {
+    font-size: 40px;
+}
+
+.skill-freelancer {
+    font-size: 24px;
+    margin-top: -7px;
+    margin-bottom: 7px;
+}
+
+.menu-profile .active {
+    background-color: #1E4D99;
+    border-radius: 0;
+}
+
+.porto-image img {
+    width: 80%;
+}
+
+.customer-icon {
+    font-size: 110px !important;
+    color: #c4c4c4 !important;
+}
+
+.name-project-ulasan {
+    color: #1E4D99;
+}
+
+.rating-score {
+    background-color: #FEC701;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.rating-ulasan {
+    color: #FEC701 !important;
+    font-size: 20px !important;
+}
+
+.komentar-panel {
+    background-color: #f6f6f6;
+    border: 0.5px solid black;
+    border-radius: 4px;
+}
+
+.title {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.divider {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.border-x {
+    border-right: 1px solid #c7c7c7;
+    border-left: 1px solid #c7c7c7;
+}
+
+.chat-actived {
+    background-color: #c4c4c43d;
+}
+
+.box {
+    padding: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.chat .form-control:focus {
+    box-shadow: none !important;
+}
+
+.chat-item:hover {
+    cursor: pointer;
+    background-color: #c4c4c43d;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.panel-admin {
+    background-color: #fff;
+    border: 1px solid #c7c7c7;
+    border-left: 4px solid #5BBC2E;
+}
+
+.panel-admin-blue {
+    background-color: #F0F6FC;
+    border-color: #72AEE6;
+}
+
+.navbar-brand {
+    margin-right: 1rem !important;
+}
+
+@media screen and (max-width: 940px) {
+    .navbar-brand {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .item-container {
+        margin: 0 5px;
+    }
+
+    .item {
+        padding: 0 0;
+    }
+
+    .icon-kategori img {
+        width: 45px;
+    }
+
+    .icon-sosmed {
+        margin-top: 0;
+    }
+
+    .text-kategori {
+        font-size: 12px;
+    }
+
+    .panel-kategori {
+        margin-top: -5.5rem;
+    }
+
+    .space {
+        height: 2rem;
+    }
+
+    .panel-login {
+        margin-top: -5rem;
+    }
+
+    .head-ulasan {
+        text-align: center;
+    }
+
+    .ulasan-komen {
+        color: #464C55;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: justify;
+    }
+
+    .ulasan-tengah {
+        margin: 20px 0;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .text-1 {
+        font-size: 20px;
+    }
+
+    .text-2 {
+        font-size: 24px;
+    }
+
+    .panduan-head {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 36px;
+    }
+
+    .content {
+        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 10px 20px;
+    }
+
+    .fs-sm-9 {
+        font-size: 9px;
+    }
+
+    .fs-sm-10 {
+        font-size: 10px;
+    }
+
+    .fs-sm-12 {
+        font-size: 12px !important;
+    }
+
+    .fs-sm-14 {
+        font-size: 14px;
+    }
+
+    .fs-sm-15 {
+        font-size: 15px !important;
+    }
+
+    .fs-sm-16 {
+        font-size: 16px;
+    }
+
+    .fs-sm-20 {
+        font-size: 20px !important;
+    }
+
+    .fs-sm-24 {
+        font-size: 24px;
+    }
+
+    .fs-sm-60 {
+        font-size: 60px !important;
+    }
+
+    .icon-user {
+        font-size: 32px !important;
+    }
+
+    .icon-whislist {
+        font-size: 14px !important;
+        margin-left: -0.7rem;
+    }
+
+    .info-pencarian {
+        height: 2vh;
+        overflow: hidden;
+    }
+
+    .item-price {
+        font-size: 16px;
+    }
+
+    .icon-profile {
+        font-size: 100px !important;
+    }
+
+    .username-freelancer {
+        font-size: 24px;
+    }
+
+    .skill-freelancer {
+        font-size: 16px;
+        margin-top: -5px;
+        margin-bottom: 3px;
+    }
+
+    .image-profile {
+        padding-right: 1rem;
+    }
+
+    .customer-icon {
+        font-size: 70px !important;
+    }
+
+    .project-list .saldo {
+        margin-left: -2rem;
+    }
+}
